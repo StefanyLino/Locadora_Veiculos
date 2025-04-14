@@ -119,6 +119,154 @@
                 </div>
             </div>
         </div>
+
+        <!-- TABELA DE VEÍCULOS CADASTRADOS -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0">
+                            Veículos Cadastrados 
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <th>Tipo</th>
+                                    <th>Modelo</th>
+                                    <th>Placa</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </thead>
+                                <tbody>
+                                    <td>Carro</td>
+                                    <td>Uno</td>
+                                    <td>ABC1D34</td>
+                                    <td>
+                                        <span class="badge bg-success">
+                                            Disponível
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="action-wrapper">
+                                            <form action="post" class="btn-group-actions">
+
+                                            <!-- Botão Deletar (sempre disponível para 'ADM') -->
+                                             <button class="btn btn-danger btn-sm delete-btn" type="submit" name="Deletar">
+                                                Deletar
+                                            </button>
+
+                                            <!-- Botões condicionais -->
+                                            <div class="rent-group">
+                                                <!-- Veículo alugado -->
+                                                <button class="btn btn-warning btn-sm" type="submit" name="Devolver">Devolver</button>
+
+                                                <!-- Veículo disponível -->
+                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
+                                                <button class="btn btn-primary" name="alugar" type="submit">Alugar</button>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tbody>
+                                <tbody>
+                                    <td>Moto</td>
+                                    <td>Honda CG 160 Titan</td>
+                                    <td>FAL1K23</td>
+                                    <td>
+                                        <span class="badge bg-warning">
+                                            Alugado
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="action-wrapper">
+                                            <form action="post" class="btn-group-actions">
+
+                                            <!-- Botão Deletar (sempre disponível para 'ADM') -->
+                                             <button class="btn btn-danger btn-sm delete-btn" type="submit" name="Deletar">
+                                                Deletar
+                                            </button>
+
+                                            <!-- Botões condicionais -->
+                                            <div class="rent-group">
+                                                <!-- Veículo alugado -->
+                                                <button class="btn btn-warning btn-sm" type="submit" name="Devolver">Devolver</button>
+
+                                             
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tbody>
+                                <tbody>
+                                    <td>Caminhão</td>
+                                    <td>Volvo FH 540</td>
+                                    <td>GRT9X77</td>
+                                    <td>
+                                        <span class="badge bg-success">
+                                            Disponível
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="action-wrapper">
+                                            <form action="post" class="btn-group-actions">
+
+                                            <!-- Botão Deletar (sempre disponível para 'ADM') -->
+                                             <button class="btn btn-danger btn-sm delete-btn" type="submit" name="Deletar">
+                                                Deletar
+                                            </button>
+
+                                            <!-- Botões condicionais -->
+                                            <div class="rent-group">
+                                                <!-- Veículo alugado -->
+                                                <button class="btn btn-warning btn-sm" type="submit" name="Devolver">Devolver</button>
+
+                                                <!-- Veículo disponível -->
+                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
+                                                <button class="btn btn-primary" name="alugar" type="submit">Alugar</button>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tbody>
+                                <tbody>
+                                    <td>Van</td>
+                                    <td>Fiat Ducato Maxi</td>
+                                    <td>MVD4J89</td>
+                                    <td>
+                                        <span class="badge bg-success">
+                                            Disponível
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <div class="action-wrapper">
+                                            <form action="post" class="btn-group-actions">
+
+                                            <!-- Botão Deletar (sempre disponível para 'ADM') -->
+                                             <button class="btn btn-danger btn-sm delete-btn" type="submit" name="Deletar">
+                                                Deletar
+                                            </button>
+
+                                            <!-- Botões condicionais -->
+                                            <div class="rent-group">
+                                                <!-- Veículo alugado -->
+                                                <button class="btn btn-warning btn-sm" type="submit" name="Devolver">Devolver</button>
+
+                                                <!-- Veículo disponível -->
+                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
+                                                <button class="btn btn-primary" name="alugar" type="submit">Alugar</button>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
