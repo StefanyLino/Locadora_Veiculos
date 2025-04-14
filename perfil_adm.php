@@ -113,6 +113,7 @@
                                 </label>
                                 <input type="number" name="dias_calculo" class="form-control" value="1" required>
                             </div>
+                            <button class="btn btn-success w-100" type="submit" name="calcular">Calcular</button>
                         </form>
                     </div>
                 </div>
