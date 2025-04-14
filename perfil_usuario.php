@@ -93,37 +93,57 @@
                                     <th>Modelo</th>
                                     <th>Placa</th>
                                     <th>Status</th>
-                                    <th>Ações</th>
                                 </thead>
                                 <tbody data-bs-toggle="modal" data-bs-target="#carro">
                                     <td>Carro</td>
                                     <td>Uno</td>
                                     <td>ABC1D34</td>
                                     <td>
-                                        <span class="badge bg-success">
+                                        <span class="badge bg-success" data-bs-toggle="modal" data-bs-target="#alugando">
                                             Disponível
                                         </span>
-                                    </td>
-                                    <td>
-                                        <div class="action-wrapper">
-                                            <form action="post" class="btn-group-actions">
+                                    <div class="modal fade" id="alugando">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Preencha para alugar:</h4>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <label for="basic-url" class="form-label">Nome:</label>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                                            <input type="text" class="form-control" placeholder="Digite seu nome..." aria-label="Username" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <label for="basic-url" class="form-label">Email:</label>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                                            <input type="text" class="form-control" placeholder="Digite seu email..." aria-label="Username" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <label for="basic-url" class="form-label">Telefone:</label>
+                                                        <div class="input-group mb-3">
+                                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                                            <input type="text" class="form-control" placeholder="Digite seu telefone..." aria-label="Username" aria-describedby="basic-addon1">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="quantidade" class="form-label">
+                                                                Quantidade de dias:
+                                                            </label>
+                                                            <input type="number" name="dias_calculo" class="form-control" value="1" required>
+                                                        </div>
+                                                        <button class="btn btn-primary w-100">Alugar</button>
 
-                                            <!-- Botão Deletar (sempre disponível para 'ADM') -->
-                                             <button class="btn btn-danger btn-sm delete-btn" type="submit" name="Deletar">
-                                                Deletar
-                                            </button>
 
-                                            <!-- Botões condicionais -->
-                                            <div class="rent-group">
-                                                <!-- Veículo alugado -->
-                                                <button class="btn btn-warning btn-sm" type="submit" name="Devolver">Devolver</button>
 
-                                                <!-- Veículo disponível -->
-                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                <button class="btn btn-primary" name="alugar" type="submit">Alugar</button>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                                </div>
                                             </div>
-                                            </form>
                                         </div>
+                                    </div>
                                     </td>
 
                                     <div class="modal fade" id="carro">
@@ -158,47 +178,6 @@
                                             Alugado
                                         </span>
                                     </td>
-                                    <td>
-                                        <div class="action-wrapper">
-                                            <form action="post" class="btn-group-actions">
-
-                                            <!-- Botão Deletar (sempre disponível para 'ADM') -->
-                                             <button class="btn btn-danger btn-sm delete-btn" type="submit" name="Deletar">
-                                                Deletar
-                                            </button>
-
-                                            <!-- Botões condicionais -->
-                                            <div class="rent-group">
-                                                <!-- Veículo alugado -->
-                                                <button class="btn btn-warning btn-sm" type="submit" name="Devolver">Devolver</button>
-
-                                                <div class="modal fade" id="moto">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title">Moto</h4>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>
-                                                        🏍️ Honda CG 160 Titan – 2022<br><br>
-                                                        A CG 160 Titan é sinônimo de confiabilidade e economia. Com visual moderno, painel digital e motor flex 160cc, essa moto oferece ótimo desempenho tanto para uso urbano quanto para pequenas viagens. Confortável, com baixa vibração e excelente autonomia, é uma das motos mais queridas do Brasil.<br><br>
-                                                        <b>Cor:</b> Vermelha<br>
-                                                        <b>Combustível:</b> Gasolina/Etanol<br>
-                                                        <b>Destaques:</b> Injeção eletrônica, freios CBS, tanque de 16,1L.<br>
-                                                        
-                                                    </p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </td>
                                 </tbody>
                                 <tbody data-bs-toggle="modal" data-bs-target="#caminhao">
                                     <td>Caminhão</td>
@@ -209,50 +188,6 @@
                                             Disponível
                                         </span>
                                     </td>
-                                    <td>
-                                        <div class="action-wrapper">
-                                            <form action="post" class="btn-group-actions">
-
-                                            <!-- Botão Deletar (sempre disponível para 'ADM') -->
-                                             <button class="btn btn-danger btn-sm delete-btn" type="submit" name="Deletar">
-                                                Deletar
-                                            </button>
-
-                                            <!-- Botões condicionais -->
-                                            <div class="rent-group">
-                                                <!-- Veículo alugado -->
-                                                <button class="btn btn-warning btn-sm" type="submit" name="Devolver">Devolver</button>
-
-                                                <!-- Veículo disponível -->
-                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                <button class="btn btn-primary" name="alugar" type="submit">Alugar</button>
-
-                                                <div class="modal fade" id="caminhao">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title">Caminhão</h4>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>
-                                                        🚛 Volvo FH 540 – 2020<br><br>
-                                                        Potência, segurança e tecnologia definem o FH 540. Esse caminhão pesado da Volvo é voltado para transporte de longa distância, com motor de 13 litros e 540 cavalos de potência. Equipado com freios ABS, ar-condicionado, computador de bordo e cabine leito, oferece conforto ao motorista e robustez na estrada.<br><br>
-                                                        <b>Cor:</b> Branco<br>
-                                                        <b>Combustível:</b> Diesel<br>
-                                                        <b>Destaques:</b> Transmissão I-Shift, controle de estabilidade, baixo consumo para a categoria.
-                                                    </p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </td>
                                 </tbody>
                                 <tbody data-bs-toggle="modal" data-bs-target="#van">
                                     <td>Van</td>
@@ -262,67 +197,6 @@
                                         <span class="badge bg-success">
                                             Disponível
                                         </span>
-                                    </td>
-                                    <td>
-                                        <div class="action-wrapper">
-                                            <form action="post" class="btn-group-actions">
-
-                                            <!-- Botão Deletar (sempre disponível para 'ADM') -->
-                                             <button class="btn btn-danger btn-sm delete-btn" type="submit" name="Deletar">
-                                                Deletar
-                                            </button>
-
-                                            <!-- Botões condicionais -->
-                                            <div class="rent-group">
-                                                <!-- Veículo alugado -->
-                                                <button class="btn btn-warning btn-sm" type="submit" name="Devolver">Devolver</button>
-
-                                                <!-- Veículo disponível -->
-                                                <input type="number" name="dias" class="form-control days-input" value="1" min="1" required>
-                                                <button class="btn btn-primary" name="alugar" data-bs-toggle="modal" data-bs-target="#formulario">Alugar</button>
-                                                <div class="modal fade" id="formulario">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <h4 class="modal-title">Banheiro</h4>
-                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <p>Este projeto de banheiro foi desenvolvido para oferecer um ambiente sofisticado e funcional, ideal para o bem-estar diário. Utilizei materiais nobres, como revestimentos em porcelanato de grandes formatos e bancadas de mármore, que conferem um visual elegante e clean. A distribuição dos elementos foi pensada para otimizar o espaço, garantindo conforto e praticidade. A iluminação foi cuidadosamente planejada para destacar os detalhes e criar uma atmosfera relaxante, com luz suave e pontual. O resultado é um banheiro moderno, aconchegante e eficiente, proporcionando uma experiência de cuidados pessoais única e agradável.</p>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="modal fade" id="van">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title">Van</h4>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>
-                                                        🚐 Fiat Ducato Maxi Cargo – 2023<br><br>
-                                                        Versátil e moderna, a Fiat Ducato Maxi é ideal para entregas urbanas ou transporte de cargas leves com agilidade. Possui espaço interno otimizado, motor econômico e direção hidráulica. Uma ótima escolha para empresas que buscam eficiência logística com conforto e economia.<br><br>
-                                                        <b>Cor:</b> Prata<br>
-                                                        <b>Combustível:</b> Diesel<br>
-                                                        <b>Destaques:</b> Capacidade de carga de até 1.600 kg, ar-condicionado, porta lateral deslizante.
-                                                    </p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                            </div>
-
-                                            </form>
-                                        </div>
                                     </td>
                                 </tbody>
                             </table>
