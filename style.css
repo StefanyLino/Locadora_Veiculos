@@ -53,3 +53,7 @@
         width: 100% !important;
     }
 }
+
+.badge .bg-success span{
+    cursor: pointer;
+}
