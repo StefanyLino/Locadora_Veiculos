@@ -90,7 +90,7 @@
 
             <div class="col md-6">
                 <div class="card h-100">
-                    <div class="card header">
+                    <div class="card-header">
                         <h4 class="mb-0">Calcular a previsão de aluguel 💵</h4>
                     </div>
                     <div class="card-body">
@@ -113,7 +113,7 @@
                                 </label>
                                 <input type="number" name="dias_calculo" class="form-control" value="1" required>
                             </div>
-                            <button class="btn btn-success w-100" type="submit" name="calcular">Calcular</button>
+                            <button class="btn btn-success w-100" type="submit" name="calcular">Calcular previsão</button>
                         </form>
                     </div>
                 </div>
